@@ -6,9 +6,12 @@
 
 int main(void){
     int num, k, bit = 0, sub;
+    int y;
 
     printf("Enter a decimal number: ");
     scanf("%d", &num);
+    printf("Enter the second digit:");
+    scanf("%d", &y);
 
     for(k = 0; k < N; k++){
         if((pow(2, k)) >= num){
@@ -19,7 +22,6 @@ int main(void){
             continue;
         }
     }
-    printf("Max bits: %d\n", bit);
     int arr[25] = {0};
 
     for(k = bit; k >= 0; k--){
@@ -33,12 +35,14 @@ int main(void){
         }
     }
 
-    for(k = bit - 1; k>= 0 ; k--){
+    for(k = bit - 1; k >= 0; k--){
         printf("%d", arr[k]);
     }
 
-
-
-
-
+    if(arr[y] == 1){
+        printf("\nTrue");
+    }
+    else{
+        printf("\nFalse");
+    }
 }
