@@ -10,11 +10,11 @@ int main(void){
     scanf("%d", &num);
 
     for(i = 0; i < num; i++){
-        printf("Enter a number: ");
+        printf("Enter number %d: ", i+1);
         scanf("%d", &r);
         s += r;
     }
     sum = (double)s / num;
 
-    printf("%.2f\n", sum);
+    printf("Average: %.2f\n", sum);
 }
